@@ -1,0 +1,27 @@
+h1= title_ 
+
+form(action="/api/url_enc/dishes", method="post")
+  label(for="name") Dish Name
+  input(type="text" name="name" id="name")
+  br
+  label(for="description") Description
+  input(type="text" name="description" id="description")
+  br
+  label(for="price") Price
+  input(type="text" name="price" id="price")
+  br
+  label(for="image_url") Photo of the Dish
+  input(type="text" name="image_url" id="image_url")
+  br
+  label(for="vegetarian") Food preference
+  input(type="radio" name="vegetarian" value="1" id="vegetarian")
+  | Vegetarian
+  input(type="radio" name="vegetarian" value="0" id="non_vegetarian")
+  | Non-vegetarian
+  br
+  label() Categor(y/ies)
+  each category in categories
+    input(type="checkbox" name="categories" value= category.id)
+    | #{category.name}
+  br
+  input(type="submit")

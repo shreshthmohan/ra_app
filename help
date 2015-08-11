@@ -1,0 +1,14 @@
+
+x-www-form-urlencoded api: /api/url_enc/
+  array: categories=1,3,5
+  
+
+Resource        POST (create)   GET (read)      PUT (update)    DELETE
+dishes  create a new dish       list dishes     error   delete all dishes
+dishes/756      error   show 756        if exists, update 756   delete 756
+
+
+1. Create a new dish
+2. Get all dishes(with tags) by Categories
+3. Get a dish
+4. Modify a dish
